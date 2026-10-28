@@ -1,0 +1,292 @@
+/* ============================================================ */
+/* NumAStAI — site styles                                       */
+/*                                                              */
+/* Color palette (edit these to retheme the whole site):        */
+/*   --color-primary    : navbar, headings accent               */
+/*   --color-accent     : hover / link accents                  */
+/*   --color-bg         : page background                       */
+/*   --color-surface    : cards                                 */
+/*   --color-text       : body text                             */
+/*   --color-muted      : secondary text                        */
+/* ============================================================ */
+
+:root {
+    --color-primary: #00695c;   /* deep teal */
+    --color-accent:  #26a69a;   /* lighter teal */
+    --color-bg:      #fafafa;
+    --color-surface: #ffffff;
+    --color-text:    #263238;
+    --color-muted:   #607d8b;
+    --radius:        10px;
+    --nav-height:    64px;
+    --font-heading:  'VT323', monospace;     /* pixel/CRT font for headers */
+    --font-body:     'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ---------- Base ---------- */
+html, body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+}
+
+/* Sticky-footer layout: body is a flex column at least one viewport tall, */
+/* main grows to fill space, footer naturally sits at the bottom.          */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main.page-content {
+    flex: 1 0 auto;
+    padding-top: calc(var(--nav-height) + 24px);
+    padding-bottom: 64px;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-fixed-custom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: var(--color-primary);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+    height: var(--nav-height);
+    line-height: var(--nav-height);
+}
+
+.navbar-fixed-custom .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 1.9rem;
+    letter-spacing: 1px;
+}
+
+.brand-logo-img {
+    height: 36px;
+    width: 36px;
+    object-fit: contain;
+}
+
+.navbar-fixed-custom ul a {
+    color: #fff;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    padding: 0 16px;
+    transition: background-color 0.2s ease;
+}
+.navbar-fixed-custom ul a:hover {
+    background-color: rgba(255,255,255,0.12);
+}
+
+.sidenav-trigger { color: #fff; }
+
+/* Sidenav (mobile) */
+.sidenav li > a {
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+/* ---------- Sections ---------- */
+.section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    scroll-margin-top: calc(var(--nav-height) + 8px);
+}
+
+.section-title {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 6px;
+    margin-bottom: 24px;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+}
+
+.lead {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    max-width: 800px;
+}
+
+/* ---------- People ---------- */
+.group {
+    margin-bottom: 32px;
+}
+
+.group-label {
+    font-family: var(--font-heading);
+    font-size: 1.7rem;
+    color: var(--color-text);
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0 0 16px 0;
+}
+
+.group-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    margin: 0;
+}
+
+.person-photo {
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: 50%;     /* mugshot: large border radius (circle) */
+    flex-shrink: 0;
+    background: #eceff1;
+}
+
+.person-info { min-width: 0; }
+
+.person-name {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--color-text);
+}
+.person-position {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.person-interests {
+    color: var(--color-text);
+    font-size: 0.88rem;
+    margin-top: 4px;
+}
+.person-joined {
+    color: var(--color-muted);
+    font-size: 0.8rem;
+    margin-top: 2px;
+}
+
+/* ---------- News ---------- */
+.news-item {
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    margin: 0 0 16px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.news-date {
+    font-size: 0.82rem;
+    color: var(--color-muted);
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.news-body {
+    font-size: 0.98rem;
+    line-height: 1.55;
+}
+
+/* Paper */
+.paper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    margin: 0 0 16px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.paper-thumb {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    background: #eceff1;
+    flex-shrink: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+.paper-body { flex: 1; min-width: 0; }
+
+.paper-title {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--color-text);
+}
+.paper-authors {
+    color: var(--color-text);
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+.paper-venue {
+    color: var(--color-primary);
+    font-size: 0.88rem;
+    font-weight: 500;
+    margin-top: 2px;
+}
+.paper-abstract {
+    color: var(--color-text);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-top: 8px;
+}
+.paper-links {
+    margin-top: 8px;
+}
+.paper-link {
+    color: var(--color-primary) !important;
+    font-weight: 500;
+    padding: 0 10px;
+}
+.paper-link:hover { background: rgba(38,166,154,0.1); }
+
+/* ---------- Footer ---------- */
+.page-footer {
+    background: var(--color-primary);
+    color: #fff;
+    padding: 18px 0;
+    margin-top: 32px;
+    flex-shrink: 0;
+}
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+/* ---------- Mobile tweaks ---------- */
+@media (max-width: 600px) {
+    .section-title { font-size: 2rem; }
+    .group-label { font-size: 1.5rem; }
+    .paper { flex-direction: column; }
+    .paper-thumb {
+        width: 100%;
+        height: auto;
+        max-height: 240px;
+    }
+    .person { flex-direction: row; }
+    .brand-logo span { font-size: 1.1rem; }
+}

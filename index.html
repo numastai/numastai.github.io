@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NumAStAI</title>
+
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Inter (body) + VT323 (pixel/CRT, headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=VT323&display=swap" rel="stylesheet">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Local styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery (required by Materialize sidenav helpers in some setups) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- NAVBAR                                                       -->
+<!-- ============================================================ -->
+<nav class="nav-extended navbar-fixed-custom">
+    <div class="nav-wrapper container">
+        <a href="#about" class="brand-logo">
+            <img src="images/logo.svg" alt="NumAStAI logo" class="brand-logo-img">
+            <span>NumAStAI</span>
+        </a>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#about">About</a></li>
+            <li><a href="#people">People</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#news">News</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Mobile side nav -->
+<ul class="sidenav" id="mobile-nav">
+    <li><a href="#about">About</a></li>
+    <li><a href="#people">People</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#news">News</a></li>
+</ul>
+
+<main class="container page-content">
+
+    <!-- ============================================================ -->
+    <!-- NEWS SECTION                                                 -->
+    <!-- ============================================================ -->
+    <section id="news" class="section">
+        <h2 class="section-title">News</h2>
+
+        <div class="news-item card">
+            <div class="news-date">16-07-2026</div>
+            <div class="news-body">
+                Alexander Bastounis, Ivan Tyukin and
+                <a href="#person-desmond-higham">Desmond J. Higham</a> published
+                <a href="#pub-inevitability-survey">A Survey of Inevitability Results in AI Instability</a>.
+            </div>
+        </div>
+
+        <!-- COMPONENT: NewsItem                                          -->
+        <!-- Generic news entry: just a date and some text.               -->
+        <div class="news-item card">
+            <div class="news-date">2026-04-30</div>
+            <div class="news-body">
+                Jane Doe gave an invited talk at the Workshop on
+                Probabilistic Numerics. (Placeholder text.)
+            </div>
+        </div>
+
+        <div class="news-item card">
+            <div class="news-date">31-06-2026</div>
+            <div class="news-body">
+                Andreas presented 2 posters at ICML 2026.
+            </div>
+        </div>
+
+        <div class="news-item card">
+            <div class="news-date">31-05-2026</div>
+            <div class="news-body">
+                Andreas Grivas and Beatrix M. G. Nielsen published
+                <a href="#pub-cosine-similarity">What Cosine Similarity of Label Representations Can and Cannot Tell us</a>.
+            </div>
+        </div>
+
+        <!-- Another NewsItem -->
+        <div class="news-item card">
+            <div class="news-date">01-10-2026</div>
+            <div class="news-body">
+                <a href="#person-felix-steinthorsson">Felix Steinthorsson</a> joined the group as a PhD student. Welcome!
+            </div>
+        </div>
+        <div class="news-item card">
+            <div class="news-date">01-10-2026</div>
+            <div class="news-body">
+                <a href="#person-jacob-russan-pritchett">Jacob Russan-Pritchett</a> joined the group as a PhD student. Welcome!
+            </div>
+        </div>
+        <div class="news-item card">
+            <div class="news-date">01-03-2026</div>
+            <div class="news-body">
+                <a href="#person-theo-beuzeville">Théo Beuzeville</a> joined the group as a Postdoc. Welcome!
+            </div>
+        </div>
+        <div class="news-item card">
+            <div class="news-date">01-01-2026</div>
+            <div class="news-body">
+                <a href="#person-andreas-grivas">Andreas Grivas</a> joined the group as a Postdoc. Welcome!
+            </div>
+        </div>
+        <div class="news-item card">
+            <div class="news-date">13-11-2025</div>
+            <div class="news-body">
+                Desmond J. Higham, Francesco Hrobat and Francesco Tudisco published
+                <a href="#pub-friendship-paradox">Generalized Friendship Paradoxes in Network Science</a>.
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- ABOUT SECTION                                                -->
+    <!-- ============================================================ -->
+    <section id="about" class="section">
+        <h2 class="section-title">About</h2>
+        <p class="lead">
+            NumAStAI (Numerical Analysis for Stable AI) is an ERC Advanced
+            Grant project based at the University of Edinburgh. We aim to
+            identify, quantify and reduce weaknesses in artificial
+            intelligence algorithms through numerical analysis, combining
+            matrix analysis, optimization, backward error analysis,
+            condition number theory and stochastic computation. Our research
+            spans six interconnected themes &mdash; Inevitability,
+            Editability, Targetability, Universality, Roundability and
+            Legislatability &mdash; studying adversarial attacks, model
+            editing, data representation bias, low-cost universal attacks,
+            the effects of low-precision computation, and how these
+            findings can inform AI policy and regulation, in pursuit of
+            more ethical, secure and reliable AI systems.
+        </p>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PEOPLE SECTION                                               -->
+    <!-- ============================================================ -->
+    <section id="people" class="section">
+        <h2 class="section-title">People</h2>
+
+        <!-- ===== Group: PI ============================================ -->
+        <!-- COMPONENT: Group                                              -->
+        <!-- To add another group, copy this whole <div class="group">…    -->
+        <!-- block and change the label + person cards inside.             -->
+        <div class="group">
+            <h3 class="group-label">Principal Investigator</h3>
+            <div class="group-members">
+
+                <!-- COMPONENT: Person -->
+                <!-- Fields: name, surname, position, interests, joined, photo -->
+                <div id="person-desmond-higham" class="person card">
+                    <img class="person-photo" src="images/person-placeholder.svg" alt="Desmond J. Higham">
+                    <div class="person-info">
+                        <div class="person-name">Desmond J. Higham</div>
+                        <div class="person-position">Professor of Numerical Analysis</div>
+                        <div class="person-interests">Stochastic computation, AI/ML, network science, uncertainty quantification, computational biology</div>
+                        <div class="person-joined">Joined: 2018</div>
+                    </div>
+                </div>
+                <!-- /Person -->
+
+            </div>
+        </div>
+        <!-- /Group -->
+
+        <!-- ===== Group: Postdocs ====================================== -->
+        <div class="group">
+            <h3 class="group-label">Postdocs</h3>
+            <div class="group-members">
+
+                <div id="person-theo-beuzeville" class="person card">
+                    <img class="person-photo" src="images/person-placeholder.svg" alt="Théo Beuzeville">
+                    <div class="person-info">
+                        <div class="person-name">Théo Beuzeville</div>
+                        <div class="person-position">Postdoctoral Researcher</div>
+                        <div class="person-interests">Numerical error analysis for AI, sensitivity of neural networks to perturbations, adversarial attacks</div>
+                        <div class="person-joined">Joined: 2026</div>
+                    </div>
+                </div>
+
+                <div id="person-andreas-grivas" class="person card">
+                    <img class="person-photo" src="images/person-placeholder.svg" alt="Andreas Grivas">
+                    <div class="person-info">
+                        <div class="person-name">Andreas Grivas</div>
+                        <div class="person-position">Postdoctoral Machine Learning Researcher</div>
+                        <div class="person-interests">Reliable and efficient AI, geometry of neural network output layers, LLMs</div>
+                        <div class="person-joined">Joined: 2026</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== Group: PhD Students ================================== -->
+        <div class="group">
+            <h3 class="group-label">PhD Students</h3>
+            <div class="group-members">
+
+                <div id="person-jacob-russan-pritchett" class="person card">
+                    <img class="person-photo" src="images/person-placeholder.svg" alt="Jacob Russan-Pritchett">
+                    <div class="person-info">
+                        <div class="person-name">Jacob Russan-Pritchett</div>
+                        <div class="person-position">PhD Student</div>
+                        <div class="person-interests"></div>
+                        <div class="person-joined">Joined: 2026</div>
+                    </div>
+                </div>
+
+                <div id="person-felix-steinthorsson" class="person card">
+                    <img class="person-photo" src="images/person-placeholder.svg" alt="Felix Steinthorsson">
+                    <div class="person-info">
+                        <div class="person-name">Felix Steinthorsson</div>
+                        <div class="person-position">PhD Student</div>
+                        <div class="person-interests"></div>
+                        <div class="person-joined">Joined: 2026</div>
+                    </div>
+                </div>
+
+                <div id="person-kevin-zhang" class="person card">
+                    <img class="person-photo" src="images/person-placeholder.svg" alt="Kevin Zhang">
+                    <div class="person-info">
+                        <div class="person-name">Kevin Zhang</div>
+                        <div class="person-position">PhD Student</div>
+                        <div class="person-interests"></div>
+                        <div class="person-joined">Joined: 2023</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PUBLICATIONS SECTION                                         -->
+    <!-- ============================================================ -->
+    <section id="publications" class="section">
+        <h2 class="section-title">Publications</h2>
+
+        <!-- COMPONENT: Paper                                             -->
+        <!-- Thumbnail on the left, text block on the right.              -->
+        <!-- `id` here is the anchor News items link to.                  -->
+
+        <div id="pub-inevitability-survey" class="paper card">
+            <img class="paper-thumb" src="images/paper-placeholder.svg" alt="Paper thumbnail">
+            <div class="paper-body">
+                <div class="news-date">16-07-2026</div>
+                <div class="paper-title">A Survey of Inevitability Results in AI Instability</div>
+                <div class="paper-authors">A. Bastounis, I. Tyukin, D. J. Higham</div>
+                <div class="paper-venue">Philosophical Transactions of the Royal Society A</div>
+                <div class="paper-abstract">
+                    Over the past decade, there has been an explosion of activity
+                    in the design of algorithms for adversarially attacking AI
+                    systems; especially in the context of image classification.
+                    For example, a carefully crafted perturbation to an image
+                    that is imperceptible to the human eye may cause a
+                    sophisticated convolutional neural network to change
+                    classification. To deal with this vulnerability, algorithms
+                    that detect or defend against such attacks have also been
+                    proposed. It has been observed empirically that attackers
+                    have the upper hand. To explain these observations, various
+                    theoretical results have subsequently emerged. This article
+                    will review some recent rigorous results, emphasizing what
+                    assumptions they use, in terms of (a) the nature of the
+                    training data, (b) the network architectures, and (c) the
+                    information available to the attacker. We also discuss how
+                    the results may give guidelines for building more secure
+                    systems, and how this research area can inform the design
+                    of AI regulations.
+                </div>
+                <div class="paper-links">
+                    <a href="https://doi.org/10.1098/rsta.2025.0128" class="btn-flat paper-link">PDF</a>
+                    <a href="https://doi.org/10.1098/rsta.2025.0128" class="btn-flat paper-link">DOI</a>
+                    <!-- <a href="#" class="btn-flat paper-link">Code</a> -->
+                </div>
+            </div>
+        </div>
+
+        <div id="pub-cosine-similarity" class="paper card">
+            <img class="paper-thumb" src="images/paper-placeholder.svg" alt="Paper thumbnail">
+            <div class="paper-body">
+                <div class="news-date">31-05-2026</div>
+                <div class="paper-title">What Cosine Similarity of Label Representations Can and Cannot Tell us</div>
+                <div class="paper-authors">B. M. G. Nielsen, A. Grivas</div>
+                <div class="paper-venue">Mechanistic Interpretability Workshop, ICML 2026</div>
+                <div class="paper-abstract">
+                    Cosine similarity is often used to measure the similarity of
+                    vector representations of neural network models. However,
+                    the cosine similarity of representations is not guaranteed
+                    to tell us anything about model probabilities. In this paper
+                    we show that for a softmax classifier, be it an image
+                    classifier or an autoregressive language model, the cosine
+                    similarity between label representations (called
+                    unembeddings in the paper) does not give any information on
+                    the probabilities assigned by the model. Specifically, we
+                    prove that given two unembeddings, it is possible to create
+                    another model which assigns the same probabilities for all
+                    inputs, but where the cosine similarity between the
+                    representations is now either 1 or -1. We also show that
+                    for a sigmoid classifier (where each input can be assigned
+                    multiple labels), all pairwise cosine similarities between
+                    the unembeddings define the set of possible label
+                    combinations. However, for softmax classifiers (where each
+                    input is assigned a ranking of the labels from most to
+                    least likely), we need all pairwise cosine similarities
+                    between all differences of unembeddings to know which
+                    rankings the model can predict. We conclude that it is
+                    misleading to interpret the cosine similarity between
+                    unembeddings without reference to the classifier that
+                    produced them.
+                </div>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2603.29488" class="btn-flat paper-link">PDF</a>
+                    <a href="https://arxiv.org/abs/2603.29488" class="btn-flat paper-link">arXiv</a>
+                    <a href="https://github.com/bemigini/how-not-to-use-cosine-sim" class="btn-flat paper-link">Code</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="pub-friendship-paradox" class="paper card">
+            <img class="paper-thumb" src="images/paper-placeholder.svg" alt="Paper thumbnail">
+            <div class="paper-body">
+                <div class="news-date">13-11-2025</div>
+                <div class="paper-title">Generalized Friendship Paradoxes in Network Science</div>
+                <div class="paper-authors">D. J. Higham, F. Hrobat, F. Tudisco</div>
+                <div class="paper-venue">SIAM J. Matrix Analysis and Applications</div>
+                <div class="paper-abstract">
+                    Generalized friendship paradoxes occur when, on average, our
+                    friends have more of some attribute than us. These paradoxes
+                    are relevant to many aspects of human interaction, notably
+                    in social science and epidemiology. Here, we derive new
+                    theoretical results concerning the inevitability of a
+                    paradox arising, using a linear algebra perspective.
+                    Following the seminal 1991 work of Scott L. Feld, we
+                    consider two distinct ways to measure and compare averages,
+                    which may be regarded as global and local. For global
+                    averaging, we show that a generalized friendship paradox
+                    holds for a large family of walk-based centralities,
+                    including Katz centrality and total subgraph
+                    communicability, and also for nonbacktracking eigenvector
+                    centrality. However, we also find counterexamples for
+                    centralities based on walks of even length. For local
+                    averaging we establish a paradox for nonbacktracking
+                    eigenvector centrality and we characterize the cases where
+                    the paradox holds with equality for the walk-based case.
+                    Defining loneliness as the reciprocal of the number of
+                    friends, we show that for this attribute the generalized
+                    and local friendship paradoxes always hold in reverse. In
+                    this sense, we are always more lonely, on average, than our
+                    friends. We also derive global and local averaging
+                    paradoxes for the case where the arithmetic mean is
+                    replaced by the geometric mean. As well as unifying and
+                    adding to the literature in this area, we highlight some
+                    open questions.
+                </div>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2511.11742" class="btn-flat paper-link">PDF</a>
+                    <a href="https://arxiv.org/abs/2511.11742" class="btn-flat paper-link">arXiv</a>
+                    <!-- <a href="#" class="btn-flat paper-link">Code</a> -->
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="page-footer">
+    <div class="container footer-inner">
+        <span>&copy; NumAStAI</span>
+    </div>
+</footer>
+
+<script>
+    // Parse a news-date string in either YYYY-MM-DD or DD-MM-YYYY format.
+    function parseNewsDate(str) {
+        var parts = str.trim().split('-').map(Number);
+        return (String(parts[0]).length === 4)
+            ? new Date(parts[0], parts[1] - 1, parts[2])   // YYYY-MM-DD
+            : new Date(parts[2], parts[1] - 1, parts[0]);  // DD-MM-YYYY
+    }
+
+    // Sort the direct children matching itemSelector within containerId
+    // most-recent-first, based on a nested .news-date.
+    function sortByDate(containerId, itemSelector) {
+        var container = document.getElementById(containerId);
+        if (!container) return;
+        var items = Array.prototype.slice.call(container.querySelectorAll(itemSelector));
+        items.sort(function (a, b) {
+            var dateA = parseNewsDate(a.querySelector('.news-date').textContent);
+            var dateB = parseNewsDate(b.querySelector('.news-date').textContent);
+            return dateB - dateA;
+        });
+        items.forEach(function (item) { container.appendChild(item); });
+    }
+
+    // Initialize Materialize components and smooth scrolling
+    document.addEventListener('DOMContentLoaded', function () {
+        sortByDate('news', '.news-item');
+        sortByDate('publications', '.paper');
+
+        M.Sidenav.init(document.querySelectorAll('.sidenav'));
+
+        // Smooth scroll for in-page anchor links, accounting for the fixed navbar.
+        document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                var targetId = this.getAttribute('href');
+                if (targetId.length < 2) return;
+                var target = document.querySelector(targetId);
+                if (!target) return;
+                e.preventDefault();
+                var navHeight = document.querySelector('.navbar-fixed-custom').offsetHeight;
+                var top = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 8;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+                // Close mobile sidenav if open
+                var sidenav = M.Sidenav.getInstance(document.getElementById('mobile-nav'));
+                if (sidenav && sidenav.isOpen) sidenav.close();
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
